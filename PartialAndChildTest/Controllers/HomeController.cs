@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using PartialAndChildTest.Models;
 using System.Web.Mvc;
 
 namespace PartialAndChildTest.Controllers
@@ -10,7 +7,13 @@ namespace PartialAndChildTest.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var model = new MyClass
+            {
+                Title = "Title",
+                Body = "Body"
+            };
+
+            return View(model);
         }
 
         public ActionResult About()

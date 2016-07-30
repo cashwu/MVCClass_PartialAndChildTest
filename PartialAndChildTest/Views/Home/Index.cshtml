@@ -1,9 +1,11 @@
-﻿@{
+﻿@model PartialAndChildTest.Models.MyClass
+
+@{
     ViewBag.Title = "Home Page";
 }
 
 <br />
-@Html.Partial("_test")
+@Html.Partial("_test", Model.Title)
 <br/>
 
-@Html.Partial("_test", "yyyy")
+@Html.Partial("_test", Model.Body)
