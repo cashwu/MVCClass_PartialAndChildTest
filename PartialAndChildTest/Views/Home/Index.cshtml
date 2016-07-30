@@ -4,8 +4,7 @@
     ViewBag.Title = "Home Page";
 }
 
-<br />
-@Html.Partial("_test", Model.Title)
+@Html.Partial("_test", Model)
 <br/>
 
-@Html.Partial("_test", Model.Body)
+@Html.Action("ChildAction")

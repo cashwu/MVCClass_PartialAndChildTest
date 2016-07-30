@@ -1,5 +1,5 @@
-﻿@model string
-    
-@($"你傳進來的是「{Model}」")
+﻿@model PartialAndChildTest.Models.MyClass
 
-
+@($"你傳進來的是「{Model.Title}」")
+<br />
+@($"你傳進來的是「{Model.Body}」")

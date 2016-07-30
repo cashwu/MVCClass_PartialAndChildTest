@@ -16,6 +16,18 @@ namespace PartialAndChildTest.Controllers
             return View(model);
         }
 
+        [ChildActionOnly]
+        public ActionResult ChildAction()
+        {
+            var model = new MyClass
+            {
+                Title = "Title - ChildAction",
+                Body = "Body - ChildAction"
+            };
+
+            return View(model);
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
